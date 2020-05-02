@@ -8,6 +8,8 @@ import traineeAchievmentsStore from './store/traineeAchievmentStore';
 import HomePage from './pages/HomePage'
 import LoginPage from './pages/LoginPage';
 import { LinearGradient } from 'expo-linear-gradient';
+import { RegisterPage } from './pages/registerPage';
+import registerPageStore from './store/registerPageStore';
 
 export default class App extends React.Component {
 
@@ -20,9 +22,10 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <Provider traineeAchievmentsStore={traineeAchievmentsStore}>
+      <Provider
+        registerPageStore={registerPageStore} >
         <LinearGradient
-          colors={['white', '#5574F7']}
+          colors={['#e8f1f2', '#1b98e0', '#006494']}
           style={{
             position: 'absolute',
             left: 0,
@@ -32,7 +35,8 @@ export default class App extends React.Component {
             width: '100%'
           }}
         />
-        <LoginPage />
+        {/* <LoginPage /> */}
+        <RegisterPage />
       </Provider>
     )
   }
