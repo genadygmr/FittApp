@@ -22,7 +22,7 @@ export default class App extends React.Component {
     return (
       <Provider traineeAchievmentsStore={traineeAchievmentsStore}>
         <LinearGradient
-          colors={['white', '#5574F7']}
+          colors={['#e8f1f2', '#1b98e0', '#006494']}
           style={{
             position: 'absolute',
             left: 0,
